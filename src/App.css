@@ -1,0 +1,197 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 0;
+
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+.bg {
+  background-image: url("./assets/backgroundFull.png");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  height: 50px;
+}
+
+.header {
+  
+    height: 25vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.social{
+  display: flex;
+  justify-content: space-around;
+  border-color: blueviolet;
+  border: 1px solid;
+  width: 200px;
+}
+
+.title h1 {
+  display: flex;
+  font-size: 0.9em;
+  color: #4B2617;
+  text-align: center;
+  max-width: 920px;
+}
+
+.real-main {
+  height: 70vh;
+  width: 100vw;
+}
+
+.main {
+  height: inherit;
+  display: grid;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+}
+
+.quemSomos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.quemSomosText p {
+  display: block;
+  text-align: justify;
+}
+
+.quemSomosText h1 {
+  display: block;
+  text-align: center;
+}
+
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: space-around;
+  justify-items: normal;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 5vh;
+  color:#4B2617;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 960px) {
+  .main {
+    display: grid;
+    height: 70vh;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .title h1 {
+    display: flex;
+    font-size: 0.9em;
+    color: #4B2617;
+    text-align: center;
+    width: 90vw;
+}
+  .logos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-content: stretch;
+    justify-content: space-around;
+}
+
+  .quemSomosHeader{
+    position: relative;
+    width: 90vw;
+    height: 10%;
+    display: flex;
+    flex-direction: grid;
+    align-items: justify;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 0.7em;
+    justify-content: space-around;
+  }
+
+  img {
+    height: 30px;
+  }
+
+  .social{
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+  }
+}
+
+
+@media screen and (max-width: 450px) { 
+  .quemSomosText p {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+
+  .title  {
+    display: flex;
+    font-size: 0.9em;
+    color: #4B2617;
+    text-align: center;
+    width: 90vw;
+}
+}
+
+@media  screen and (max-height: 720px) {
+  .quemSomosText {
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  
+}
