@@ -1,0 +1,13 @@
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  max-height: 30vh;
+}
+.footer h1{
+  font-size: 1.0rem;
+}
+@media (max-width: 768px) {
+
+}
