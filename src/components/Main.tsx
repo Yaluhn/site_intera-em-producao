@@ -1,10 +1,10 @@
-import Slideshow from '../components/Slideshow '
 import "../components/styles/main.css"
+import CardGrid from './CardGrid';
 
 const Main = () => {
   return (
     <div className="main-container">
-      <Slideshow />
+      <CardGrid />
     </div>
   );
 };
