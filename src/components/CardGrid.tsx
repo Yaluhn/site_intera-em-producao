@@ -20,7 +20,7 @@ const CardGrid = () => {
     {
       id: 1,
       title: "Quem Somos",
-      description: 'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa", a diversidade de olhares e a construção colaborativa para gerar novos caminhos e apostar em possibilidades inventivas.',
+      description: 'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
       image: card1,
       link: "/quem-somos"
     },
@@ -70,13 +70,14 @@ const CardGrid = () => {
           </div>
           <div className="card-img">
             <img src={card.image} alt={card.title} />
-          </div>
-          <div className="card-description">
+            <div className="card-description">
             <p>{card.description}</p>
             <Link to={card.link} className="card-link">
               Ver mais
             </Link>
           </div>
+          </div>
+        
         </div>
       ))}
     </div>
