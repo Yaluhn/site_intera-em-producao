@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: center;
   height: 10vh;
-  max-height: 30vh;
+  max-height: 10vh;
 }
 .footer h1{
-  font-size: 1.0rem;
+  font-size: 0.78rem;
 }
 @media (max-width: 768px) {
 
