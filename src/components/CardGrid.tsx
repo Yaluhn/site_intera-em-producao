@@ -65,19 +65,25 @@ const CardGrid = () => {
     <div className="card-grid">
       {cards.map((card) => (
         <div className="card" key={card.id}>
-          <div className="card-title">
-            <h3>{card.title}</h3>
+          <div className="card-inner">
+            <div className="card-front">
+              <div className="card-img">
+                <img src={card.image} alt={card.title} />
+                <div className="card-title">
+                  <h3>{card.title}</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-back">
+              <div className="card-description">
+                <p>{card.description}</p>
+                <Link to={card.link} className="card-link">
+                  Ver mais
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="card-img">
-            <img src={card.image} alt={card.title} />
-            <div className="card-description">
-            <p>{card.description}</p>
-            <Link to={card.link} className="card-link">
-              Ver mais
-            </Link>
-          </div>
-          </div>
-        
         </div>
       ))}
     </div>

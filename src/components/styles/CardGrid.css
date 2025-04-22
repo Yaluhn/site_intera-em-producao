@@ -1,46 +1,58 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 5fr));
-  gap: 2rem;
-  padding: 2rem;
+  gap: 0rem;
+  padding: 1rem;
   max-width: 80%;
   margin: 2rem auto;
 }
 
 .card {
   background-color: transparent;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.8s ease, box-shadow 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;  
   perspective: 1000px;
+  height: 200px;
   position: relative;
-  z-index: 1;
 }
 
-.card:hover {
-  transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  z-index: 10;
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
 }
 
-.card-title {
-  padding: 1rem;
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-front {
   background-color: transparent;
-  border-bottom: 1px solid #bbb;
+  flex-direction: column;
 }
 
-.card-title h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
+.card-back {
+  background-color: #fff;
+  transform: rotateY(180deg);
+  padding: 1rem;
 }
 
 .card-img {
-  height: 200px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -52,44 +64,30 @@
   transition: opacity 0.6s ease-in-out;
 }
 
-.card:hover {
-  overflow: visible;
+.card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
 }
 
-.card:hover .card-img img {
-  opacity: 0;
+.card-title h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .card-description {
-  padding: 1rem;
-  flex-grow: 1;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  min-height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.card:hover .card-description {
-  display: flex;
+  text-align: center;
   opacity: 1;
   animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .card-description p {
@@ -115,7 +113,16 @@
   background-color: #814226;
 }
 
-/* Responsivo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
