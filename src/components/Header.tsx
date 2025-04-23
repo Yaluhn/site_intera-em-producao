@@ -7,7 +7,7 @@ import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const text = 'AMAMOS CRIATIVIDADE E INOVAÇÃO, E COM ELAS ACREDITAMOS QUE UM MUNDO MELHOR É POSSÍVEL!';
+  const text = 'APAIXONADOS PELA CRIATIVIDADE!';
   const [displayText,setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
   useEffect(() =>{
@@ -38,7 +38,7 @@ const Header = () => {
         <a href='https://www.youtube.com/@interacriativa846' target='_blank'> 
           <img src={Youtube} alt="Youtube" />
         </a>
-        <a href='' target='_blank'>
+        <a href='https://wa.me/5579991196055' target='_blank'>
           <img src={Whatsapp} alt="Whatsapp" />
         </a>
         </nav>

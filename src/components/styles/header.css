@@ -1,9 +1,8 @@
-
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
   width: 100%;
   box-sizing: border-box;
   height: 16.7vh;
@@ -49,7 +48,7 @@
 .slogan h1 {
   white-space: wrap;
   overflow: hidden;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #4A2617;
 }
@@ -68,7 +67,7 @@
     gap: 1rem;
   }
   .header{
-    height: 25vh;
+    height: 15vh;
   }
 
   .logo img {
@@ -88,4 +87,3 @@
     padding: 0 1rem;
   }
 }
-

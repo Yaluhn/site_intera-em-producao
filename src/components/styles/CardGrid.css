@@ -1,10 +1,10 @@
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 5fr));
+  grid-template-columns: repeat(auto-fit, minmax(33%, 5fr));
   gap: 0rem;
   padding: 1rem;
-  max-width: 75%;
-  margin: 2rem auto;
+  max-width: 80%;
+  margin: 1.4rem auto;
 }
 
 .card {
@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease;
+  transition: transform 1.5s ease;
 }
 
 .card:hover .card-inner {
@@ -45,9 +45,10 @@
 }
 
 .card-back {
-  background-color: #fff;
+  background-color: transparent;
   transform: rotateY(180deg);
   padding: 1rem;
+  border: 3px solid #eeeeee;
 }
 
 .card-img {
@@ -66,19 +67,21 @@
 
 .card-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 30%;
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 1rem;
   background-color: transparent;
   transition: 0.5s ease-in-out;
+  
 }
 
 .card-title h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: #333;
+  color: #ffffffc8;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card-description {
