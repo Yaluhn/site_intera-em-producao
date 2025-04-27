@@ -7,7 +7,7 @@ const OficinaseCursos = () =>{
     <div>
       <Header/>
       <div className="Content">
-        <h1>Oficinas e Cursos</h1>
+        <h1>Observatório da Cultura</h1>
         </div>
       <Footer/>
     </div>
