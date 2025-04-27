@@ -46,8 +46,8 @@ const cardProps: CardProps[] = [
 		id: 4,
 	color:"#4CC495",
 	background: "../src/assets/9.png",
-	head:"Cursos",
-	name:"Cursos",
+	head:"Observatório",
+	name:"Observatório",
 	click: false
 	},
 	{
