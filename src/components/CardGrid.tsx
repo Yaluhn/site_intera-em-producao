@@ -47,7 +47,7 @@ const CardGrid = () => {
     },
     {
       id: 5,
-      title: "Oficinas e Cursos",
+      title: "Observatório PNAB",
       description: "Descrição do card 5. Clique em ver mais para detalhes.",
       image: card5,
       link: "/oficinas-e-cursos"
