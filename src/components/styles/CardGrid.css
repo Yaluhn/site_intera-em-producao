@@ -2,9 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   gap: 0rem;
-  padding: 1rem;
-  max-width: 80%;
-  margin: 1.4rem auto;
+  min-width: 100%;
 }
 
 .card {
