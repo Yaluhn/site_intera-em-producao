@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../components/styles/Slideshow.css';
+import '../components/styles/SlideShow.css';
 import card1 from "../assets/6.png"
 import card2 from "../assets/5.png"
 import card3 from "../assets/7.png"
