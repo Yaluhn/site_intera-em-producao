@@ -19,19 +19,20 @@ html{
   flex-direction: column;
 }
 
-body::-webkit-scrollbar{
-  width: 10px;
-  height: 10px;
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-body::-webkit-scrollbar-track{
-  background-color: #D9D9D9;
 
+body::-webkit-scrollbar-track {
+  background: transparent;
 }
+
 body::-webkit-scrollbar-thumb {
-  background-color: #dbc99da4;    
-  border-radius: 20px;
-  border: 1px solid ;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
+
 .content {
   flex: 1;
   background-color: transparent;
