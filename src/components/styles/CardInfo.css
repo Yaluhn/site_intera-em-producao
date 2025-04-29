@@ -1,0 +1,166 @@
+.container-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.Cards-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 50%;
+}
+
+.cardBody-info {
+  position: relative;
+  width: 25%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cardBody-info:hover {
+  transform: scale(1.05);
+}
+
+.card-info-img,
+.card-info-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 100%;
+}
+
+.card-info-img {
+  object-fit: cover;
+  z-index: 1;
+  opacity: 1;
+}
+
+.card-info-content {
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card-info-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-info-description {
+  font-size: 1rem;
+  color: #444;
+}
+
+.cardBody-info:hover .card-info-img {
+  opacity: 0;
+}
+
+.cardBody-info:hover .card-info-content {
+  opacity: 1;
+}
+
+/* Formulário */
+.contact-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #4A2617;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #4A2617;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #814226;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .container-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Cards-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .cardBody-info {
+    width: 40%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 762px) {
+  .cardBody-info {
+    width: 40%;
+    height: 220px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 442px) {
+  .cardBody-info {
+    width: 40%;
+    height: 100px;
+  }
+}

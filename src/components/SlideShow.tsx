@@ -102,7 +102,7 @@ const Slideshow = () => {
       if (!isAnimating) {
         nextSlide();
       }
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [currentSlide, isAnimating]);
