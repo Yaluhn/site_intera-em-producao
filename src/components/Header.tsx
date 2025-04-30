@@ -23,12 +23,15 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="top-header">
         <div className="logo">
           <Link to="/">
             <img src={Logo} alt="Logo" />
           </Link>
-         
+        </div>
+        <div className="slogan">
+        <h1>
+         {displayText}
+        </h1>
         </div>
         <nav className="menu-redes-sociais">
           <a href='https://www.instagram.com/interacriativa/' target='_blank'> 
@@ -42,13 +45,8 @@ const Header = () => {
           <img src={Whatsapp} alt="Whatsapp" />
         </a>
         </nav>
-      </div>
 
-      <div className="slogan">
-        <h1>
-         {displayText}
-        </h1>
-      </div>
+
     </header>
   )
 }

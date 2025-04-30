@@ -1,24 +1,26 @@
 .container-contact {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
   flex-wrap: wrap;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .Cards-info {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   width: 50%;
 }
 
 .cardBody-info {
   position: relative;
   width: 25%;
-  height: 200px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   background-color: #f9f9f9;
@@ -85,7 +87,6 @@
   opacity: 1;
 }
 
-/* Formulário */
 .contact-form {
   width: 45%;
   display: flex;
@@ -129,7 +130,7 @@
   background-color: #814226;
 }
 
-/* Responsivo */
+
 @media (max-width: 992px) {
   .container-contact {
     flex-direction: column;
@@ -142,8 +143,8 @@
   }
 
   .cardBody-info {
-    width: 40%;
-    height: 300px;
+    width: 30%;
+    height: 200px;
   }
 }
 

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   gap: 0rem;
-  min-width: 100%;
+  max-width: 1200px;
 }
 
 .card {

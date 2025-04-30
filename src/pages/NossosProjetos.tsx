@@ -1,12 +1,12 @@
 import CardGrid2 from "../components/CardGridService"
 import Footer from "../components/Footer"
-import Header from "../components/Header"
+import HeaderInternal from "../components/HeaderInternal"
 import '../components/styles/Pages.css'
 
 const NossosProjetos = () =>{
   return(
     <div>
-      <Header/>
+      <HeaderInternal/>
       <div className="Content">
       <h1>Nossos Projetos</h1>
       <CardGrid2/>

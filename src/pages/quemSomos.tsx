@@ -1,13 +1,13 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import '../components/styles/Pages.css'
 import '../components/styles/QuemSomos.css'
 import Slideshow from "../components/SlideShow";
+import HeaderInternal from "../components/HeaderInternal";
 
 const QuemSomos = () => {
   return(
     <div>
-      <Header/>
+      <HeaderInternal/>
         <div className="Content-quemsomos">
         <h1 className="page-title">Quem Somos</h1>
         <Slideshow/>

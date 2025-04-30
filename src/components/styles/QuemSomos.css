@@ -3,9 +3,10 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    background-color: #F3F9F9;
 }
 .Content-quemsomos{
-    background-color: #f7f7f7b7 !important;
+    background-color: #f7f7f75e !important;
 }
 .page-title{
     text-align: center;

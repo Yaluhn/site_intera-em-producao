@@ -1,13 +1,13 @@
 import CardTriple from "../components/CardTriple"
 import Footer from "../components/Footer"
-import Header from "../components/Header"
+import HeaderInternal from "../components/HeaderInternal"
 import '../components/styles/Pages.css'
 import '../components/styles/Servicos.css'
 
 const servicos = () =>{
   return(
     <div>
-      <Header/>
+      <HeaderInternal/>
       <div className="Content service">
         <h1 className="page-title-service">Serviços</h1>
         <CardTriple/>

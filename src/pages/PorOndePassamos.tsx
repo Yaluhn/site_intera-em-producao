@@ -1,12 +1,12 @@
 import Footer from "../components/Footer"
-import Header from "../components/Header"
+import HeaderInternal from "../components/HeaderInternal"
 import ImageSlider from "../components/ImageSlider"
 import '../components/styles/PorOndePassamos.css'
 
 const PorOndePassamos = () =>{
   return(
     <div>
-      <Header/>
+      <HeaderInternal/>
       <div className="Content-por-onde-passamos">
         <h1>Por Onde Passamos</h1>
       <ImageSlider/>
