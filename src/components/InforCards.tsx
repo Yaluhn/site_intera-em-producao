@@ -35,21 +35,21 @@ const InforCard = () => {
       link: "/por-onde-passamos"
     },
     {
-      id: 1,
+      id: 4,
       title: "Gmail",
       description: 'intera',
       image: card1,
       link: "/quem-somos"
     },
     {
-      id: 2,
+      id: 5,
       title: "Instagram",
       description: "@interacriativa",
       image: card2,
       link: "/servicos"
     },
     {
-      id: 2,
+      id: 6,
       title: "Instagram",
       description: "@interacriativa",
       image: card2,

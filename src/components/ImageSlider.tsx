@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import card1 from "../assets/6.png";
 import card2 from "../assets/5.png";
 import card3 from "../assets/7.png";
@@ -12,11 +12,12 @@ interface Card {
   image: string;
 }
 
-const cards: Card[] = [
+const originalCards: Card[] = [
   {
     id: 1,
     title: "Serviço X",
-    description: 'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
     image: card4,
   },
   {
@@ -39,43 +40,82 @@ const cards: Card[] = [
   },
 ];
 
-const ImageSlider = () => {
-  const galleryRef = useRef<HTMLDivElement>(null);
-  const [currentItem, setCurrentItem] = useState(0);
+const cards = [...originalCards, ...originalCards, ...originalCards];
 
-  const maxItems = cards.length;
+const ImageSlider = () => {
+  const [position, setPosition] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [itemWidth, setItemWidth] = useState(0);
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  const originalLength = originalCards.length;
+  const totalItems = cards.length;
+
+  useEffect(() => {
+    if (itemRef.current) {
+      const style = window.getComputedStyle(itemRef.current);
+      const gap = parseFloat(style.marginRight) || 15;
+      setItemWidth(itemRef.current.offsetWidth + gap);
+    }
+  }, []);
+
+  const nextSlide = () => {
+    if (isTransitioning) return;
+
+    setIsTransitioning(true);
+    setPosition((prev) => {
+      if (prev >= totalItems - originalLength - 1) {
+        setTimeout(() => {
+          setIsTransitioning(false);
+          setPosition(0);
+        }, 0);
+        return prev + 1;
+      }
+      return prev + 1;
+    });
+
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentItem(prev => (prev + 1) % maxItems);
-    }, 1000);
+      nextSlide();
+    }, 1800);
 
     return () => clearInterval(interval);
-  }, [maxItems]);
+  }, );
 
-  useEffect(() => {
-    const gallery = galleryRef.current;
-    const item = gallery?.children[currentItem] as HTMLElement;
+  const getTransformValue = () => {
+    return `translateX(-${position * itemWidth}px)`;
+  };
 
-    if (item) {
-      item.scrollIntoView({
-        inline: "center",
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }
-  }, [currentItem]);
+  const getTransitionStyle = () => {
+    return isTransitioning ? "transform 0.5s ease-in-out" : "none";
+  };
 
   return (
     <div className="container-img-slider">
       <div className="gallery-wrapper">
-        <div className="gallery" ref={galleryRef}>
+        <div
+          className="gallery"
+          style={{
+            transform: getTransformValue(),
+            transition: getTransitionStyle(),
+          }}
+        >
           {cards.map((card, index) => (
             <div
-              key={card.id}
-              className={`item ${index === currentItem ? "current-item" : ""}`}
+              key={`${card.id}-${index}`}
+              className={`item ${index === position + 1 ? "current-item" : ""}`}
+              ref={index === 0 ? itemRef : null}
             >
-              <img src={card.image} alt={card.description} className="item-image" />
+              <img
+                src={card.image}
+                alt={card.description}
+                className="item-image"
+              />
             </div>
           ))}
         </div>

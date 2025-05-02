@@ -105,7 +105,7 @@ const Slideshow = () => {
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [currentSlide, isAnimating]);
+  }, );
 
   return (
     <div className="slideshow-container">

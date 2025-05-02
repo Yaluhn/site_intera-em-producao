@@ -1,10 +1,14 @@
 import "../components/styles/banner.css"
-import card1 from "../assets/7.png";
-const Banner = () =>{
+interface bannerProps{
+  image:string;
+  Frase:string;
+}
+const Banner = ({image,Frase}:bannerProps) =>{
   return(
     <div className="banner-container">
       <div className="banner-img">
-        <img src={card1}/>
+        <h1 className="banner-title">{Frase}</h1>
+        <img src={image}/>
       </div>
     </div>
   )
