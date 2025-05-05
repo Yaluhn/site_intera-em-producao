@@ -16,21 +16,42 @@ const CardGrid = () => {
   const cards: Card[] = [
     {
       id: 1,
-      title: "Quem Somos",
-      description: 'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+      title: "Tour Brasil Pro Music Busines",
+      description: 'Em 2022, Intera foi responsável pela gestão administrativa da tour Pro Music Business 360, que circulou vários estados do Brasil com o palestrante Bono da Costa .',
       image: card1,
       link: "/quem-somos"
     },
     {
       id: 2,
-      title: "Serviços",
+      title: "Descomplicando Projetos Culturais",
       description: "Descrição do card 2. Clique em ver mais para detalhes.",
       image: card2,
       link: "/servicos"
     },
     {
       id: 3,
-      title: "Por onde Passamos",
+      title: "Casulo Criativo",
+      description: "Descrição do card 3. Clique em ver mais para detalhes.",
+      image: card3,
+      link: "/por-onde-passamos"
+    },
+    {
+      id: 4,
+      title: "Feirinha Gambiarra",
+      description: "Descrição do card 3. Clique em ver mais para detalhes.",
+      image: card3,
+      link: "/por-onde-passamos"
+    },
+    {
+      id: 5,
+      title: "Casa Intera",
+      description: "Descrição do card 3. Clique em ver mais para detalhes.",
+      image: card3,
+      link: "/por-onde-passamos"
+    },
+    {
+      id: 6,
+      title: "Periferia",
       description: "Descrição do card 3. Clique em ver mais para detalhes.",
       image: card3,
       link: "/por-onde-passamos"
@@ -38,14 +59,14 @@ const CardGrid = () => {
   ];
 
   return (
-    <div className="card-grid">
+    <div className="card-grid-service">
       {cards.map((card) => (
         <div className="card-service" key={card.id}>
           <div className="card-inner">
             <div className="card-front">
               <div className="card-img">
                 <img src={card.image} alt={card.title} />
-                <div className="card-title">
+                <div className="card-title-service">
                   <h3>{card.title}</h3>
                 </div>
               </div>

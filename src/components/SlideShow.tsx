@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../components/styles/SlideShow.css';
-import card1 from "../assets/6.png"
-import card2 from "../assets/5.png"
-import card3 from "../assets/7.png"
+import James from "../assets/James.png"
+import Alisson from "../assets/Alisson.png"
 import card4 from "../assets/8.png"
 import card5 from "../assets/9.png"
 import card6 from "../assets/10.png"
@@ -26,44 +25,51 @@ const Slideshow = () => {
       id: 1,
       title: "Nossa Equipe",
       description: "Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o 'fazer fora da caixa',a diversidade de olhares e a construção colaborativa para gerar novos caminhos e apostar em possibilidades inventivas.Temos como nossa missão promover a felicidade a partir das experiências dos produtos e serviços ofertados, de forma direta, eficaz e sobretudo rápida, para uma melhor experiência de ambos os lados.Amamos criatividade e inovação, e com elas acreditamos que um mundo melhor é possível!A INTERA é uma empresa de Gestão Criativa que propõe compartilhar as experiências de mais de 10 anos de atuação  na execução e planejamento de projetos e políticas nas áreas de Cultura, Turismo e Juventude. Oferecemos oficinas empreendedoras e aceleração de negócios e projetos, atuamos no desenvolvimento de metodologias de ensino, trilhas de inovação e impacto social elaboradas para preparar as pessoas para o futuro do trabalho.",
-      image: card1,
+      image: card5,
       link: "/quem-somos"
     },
     {
       id: 2,
       title: "Alisson",
-      description: "Descrição do card 2. Clique em ver mais para detalhes.",
-      image: card2,
+      description: "CEO",
+      image: Alisson,
       link: "/servicos"
     },
     {
       id: 3,
-      title: "Por onde Passamos",
-      description: "Descrição do card 3. Clique em ver mais para detalhes.",
-      image: card3,
+      title: "Thiara Camera",
+      description: "Diretora",
+      image: card4,
       link: "/por-onde-passamos"
     },
     {
       id: 4,
-      title: "Nossos Projetos",
-      description: "Descrição do card 4. Clique em ver mais para detalhes.",
+      title: "Mariana Xavier",
+      description: "Administrativo",
       image: card4,
       link: "/nossos-projetos"
     },
     {
       id: 5,
-      title: "Oficinas e Cursos",
-      description: "Descrição do card 5. Clique em ver mais para detalhes.",
+      title: "Ravel Araujo",
+      description: "CTO",
       image: card5,
       link: "/oficinas-e-cursos"
     },
     {
       id: 6,
-      title: "Fale com a Gente",
-      description: "Descrição do card 6. Clique em ver mais para detalhes.",
+      title: "Kcau",
+      description: "Administrativo",
       image: card6,
       link: "/fale-conosco"
-    }
+    },
+    {
+      id:7,
+      title:"James Pereira",
+      description: "Desenvolvedor",
+      image:James,
+      link:"/fale-conosco"
+    },
   ];
 
   const changeSlide = (newIndex: number) => {

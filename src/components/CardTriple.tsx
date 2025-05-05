@@ -15,21 +15,21 @@ const CardTriple = () => {
   const cards: Card[] = [
     {
       id: 1,
-      title: "Serviço X",
+      title: "Oficinas",
       description: 'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
       image: card1,
       link: "/quem-somos"
     },
     {
       id: 2,
-      title: "Serviço Y",
+      title: "Mentoria em Gestão Cultural",
       description: "Descrição do card 2. Clique em ver mais para detalhes.",
       image: card2,
       link: "/servicos"
     },
     {
       id: 3,
-      title: "Serviço Z",
+      title: "Mentorias em Projetos Culturais",
       description: "Descrição do card 3. Clique em ver mais para detalhes.",
       image: card3,
       link: "/por-onde-passamos"

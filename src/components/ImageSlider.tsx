@@ -1,8 +1,15 @@
 import { useState, useEffect, useRef } from "react";
-import card1 from "../assets/6.png";
-import card2 from "../assets/5.png";
-import card3 from "../assets/7.png";
-import card4 from "../assets/10.png";
+import PrefItabaianinha from "../assets/PrefItabaianinha.png";
+import PrefRiachuelo from "../assets/PrefRiachuelo.png";
+import EscolaLegislativo from "../assets/EscolaLegislativo.png"
+import Alese from "../assets/image.png";
+import Funcap from "../assets/FUNCAP.png"
+import PrefTomardoGeru from "../assets/PrefTomardoGeru.png"
+import PrefCapela from "../assets/PrefCapela.png"
+import AHS from "../assets/AHS.png"
+import PrefLaranjeiras from "../assets/PrefLaranjeiras.png"
+import PrefBarra from "../assets/PrefBarra.png"
+import RockSertao from "../assets/RockSertao.png"
 import "../components/styles/ImageSlider.css";
 
 interface Card {
@@ -18,26 +25,76 @@ const originalCards: Card[] = [
     title: "Serviço X",
     description:
       'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
-    image: card4,
+    image: EscolaLegislativo,
   },
   {
     id: 2,
     title: "Serviço Y",
     description: "Descrição do card 2. Clique em ver mais para detalhes.",
-    image: card1,
+    image: PrefItabaianinha,
   },
   {
     id: 3,
     title: "Serviço Z",
     description: "Descrição do card 3. Clique em ver mais para detalhes.",
-    image: card2,
+    image: PrefRiachuelo,
   },
   {
     id: 4,
     title: "Serviço W",
     description: "Descrição do card 4. Clique em ver mais para detalhes.",
-    image: card3,
+    image: Alese,
   },
+  {
+    id: 5,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: Funcap,
+  },
+  {
+    id: 6,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: PrefTomardoGeru,
+  },
+  {
+    id: 7,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: PrefCapela,
+  },
+  {
+    id: 8,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: AHS,
+  },
+  {
+    id: 9,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: PrefLaranjeiras,
+  },
+  {
+    id: 10,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: PrefBarra,
+  },
+  {
+    id: 11,
+    title: "Serviço X",
+    description:
+      'Nós na Intera, somos uma engrenagem de pessoas apaixonadas pelo que fazem, e valorizamos o "fazer fora da caixa".',
+    image: RockSertao,
+  },
+  
 ];
 
 const cards = [...originalCards, ...originalCards, ...originalCards];
